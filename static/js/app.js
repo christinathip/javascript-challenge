@@ -10,9 +10,11 @@ function buildTable(data){
   tbody.html("");
   // Loop through data
   data.forEach((dataRow) => {
+    // Append
     let row = tbody.append("tr");
 
     Object.values(dataRow).forEach((val) => {
+      // Append
       let elem = row.append("td");
       elem.text(val);
     });
@@ -27,6 +29,7 @@ function clicked(){
 
   // Check date input and filter data by date input
   if(date){
+    // Apply filter
     filterData = filterData.filter((row)=>row.datetime === date);
   }
 
